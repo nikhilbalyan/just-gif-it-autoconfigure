@@ -24,7 +24,7 @@ public class JustGifItAutoConfiguration {
 	
 //	@PostConstruct
 	@ConditionalOnProperty(prefix = "com.justgifit", name= "create-result-dir")
-	private void init() {
+	public Boolean init() {
 		File gifFolder = new File(gifLocation);
 		if(!gifFolder.exists()) {
 			gifFolder.mkdir();
